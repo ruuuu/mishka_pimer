@@ -1,0 +1,221 @@
+/* -- Продукт -- */
+.product {
+  &:hover .product__description-wrapper {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active .product__description-wrapper {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+
+/* картинка продукта */
+.product__image {
+  vertical-align: bottom;
+}
+
+/* обертка описания продукта */
+.product__description-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 179px;
+  padding-top: 26px;
+  padding-left: 28px;
+  padding-right: 28px;
+  padding-bottom: 3px;
+  border: @header-border;
+}
+
+/* заголовок продукта */
+.product__title {
+  .general-font-family-bold();
+  font-size: 17px;
+  line-height: 1.41;
+  color: black;
+
+  margin: 0;
+  margin-bottom: 7px;
+}
+
+.product__title-link {
+  .general-font-family-bold();
+  font-size: 17px;
+  line-height: 1.41;
+  color: black;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* описания продукта */
+.product__description {
+  .general-font-family();
+  font-size: 13px;
+  line-height: 2.31;
+  color: #444444;
+
+  margin: 0;
+  margin-bottom: 18px;
+}
+
+/* цена / корзина продукта */
+.product__cart-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-height: 68px;
+  border-top: @header-border;
+}
+
+.product__price {
+  .general-font-family-bold();
+  font-size: 15px;
+  line-height: 1.6;
+  color: black;
+}
+
+.product__cart-button:hover svg {
+  fill: #63d1bb;
+}
+
+.product__cart-button:active svg {
+  fill: rgba(99, 209, 187, 0.3);
+}
+
+.product__cart-icon-svg {
+  fill: #cccccc;
+
+  pointer-events: none;
+}
+
+/* ПЛАНШЕТ ПРОДУКТ -- */
+@media (min-width: @tablet_width) {
+  .product {
+    display: flex;
+  }
+
+  /* картинка продукта ПЛАНШЕТ*/
+  .product__image-link {
+    width: 50%;
+  }
+
+  .product__image {
+    display: block;
+    width: 334px;
+    height: 334px;
+  }
+
+  /* обертка описания продукта ПЛАНШЕТ*/
+  .product__description-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+    padding-left: 26px;
+    border-top: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+  }
+
+  /* заголовок продукта ПЛАНШЕТ */
+  .product__title {
+    .general-font-family-bold();
+    font-size: 17px;
+    line-height: 1.41;
+    color: black;
+
+    padding-right: 37px;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
+  .product__title a {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  /* описание продукта ПЛАНШЕТ */
+  .product__description {
+    font-size: 15px;
+    line-height: 2;
+
+    margin-bottom: 0;
+  }
+
+  /* цена / корзина продукта ПЛАНШЕТ */
+  .product__cart-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 70px;
+    padding-left: 5px;
+    padding-right: 3px;
+    margin-top: auto;
+    border-top: 1px solid #ececec;
+  }
+
+  .product__price {
+    font-size: 17px;
+    line-height: 1.41;
+  }
+}
+
+/* ДЕСКТОП ПРОДУКТ -- */
+@media (min-width: @desktop_width) {
+  .product {
+    flex-direction: column;
+
+    width: 316px;
+    margin-right: 50px;
+  }
+
+  /* картинка продукта ДЕСКТОП*/
+  .product__image-link {
+    display: block;
+    width: auto;
+    height: 462px;
+  }
+
+  .product__image {
+    display: block;
+    width: 316px;
+    height: 462px;
+  }
+
+  /* обертка описания продукта ДЕСКТОП*/
+  .product__description-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    width: auto;
+    min-height: 197px;
+    border-top: none;
+    border-right: 1px solid #ececec;
+    border-left: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+  }
+
+  /* заголовок продукта ДЕСКТОП */
+  .product__title {
+    padding-right: 30px;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
+  /* цена / корзина продукта ДЕСКТОП*/
+  .product__cart-wrapper {
+    padding-left: 0;
+  }
+}

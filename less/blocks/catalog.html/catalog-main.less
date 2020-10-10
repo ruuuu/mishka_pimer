@@ -1,0 +1,49 @@
+/* -- КАТАЛОГ -- */
+.catalog-main {
+
+  padding-bottom: 58px;
+}
+/* -- загаловок каталога  -- */
+.catalog-main__page-title {
+  .general-font-family-bold();
+  font-size: 27px;
+  line-height: 1.11;
+  color: black;
+  text-align: center;
+
+  min-height: 178px;
+  padding: 74px 0;
+  margin: 0;
+
+  background-color: #f1f1f1;
+}
+
+/* -- список товаров каталога  -- */
+.catalog-main__catalog {
+  margin-bottom: 30px;
+}
+
+// ПЛАНШЕТ
+@media (min-width: @tablet_width) {
+  .catalog-main {
+    padding-bottom: 0;
+  }
+
+  .catalog-main__page-title {
+    .section-title-tablet();
+
+    min-height: 162px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+// ДЕСКТОП
+@media (min-width: @desktop_width) {
+  .catalog-main__page-title {
+    .section-title-desktop();
+
+    min-height: 200px;
+    padding-top: 33px;
+  }
+}

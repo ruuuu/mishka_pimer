@@ -1,0 +1,140 @@
+/* ПОДВАЛ */
+.page-footer {
+  background-color: #f1f1f1;
+}
+
+.page-footer__inner {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 160px;
+}
+
+/* логотип подвала */
+.page-footer__logo {
+  display: none;
+}
+
+/* социальные иконки подвала  */
+.page-footer__socials-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 55px;
+  padding-right: 55px;
+  border-bottom: @header-border;
+
+  overflow: hidden;
+}
+
+.page-footer__developer-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Разработчик подвала */
+.page-footer__developer {
+  display: flex;
+  align-items: center;
+
+  min-height: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0 auto;
+}
+
+.page-footer__developer-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.page-footer__developer-icon-svg {
+  display: block;
+
+  fill: #63d1bb;
+  pointer-events: none;
+}
+
+.page-footer__developer-link:hover svg {
+  fill: #46c1ae;
+}
+
+.page-footer__developer-link:active svg {
+  fill: #46c1ae;
+  opacity: 0.3;
+}
+
+.page-footer__developer-link:active .page-footer__developer-text {
+  opacity: 0.3;
+}
+
+.page-footer__developer-text {
+  .general-font-family-bold();
+  font-size: 19px;
+  line-height: 0.95;
+  color: black;
+
+  padding-bottom: 5px;
+  margin-right: 30px;
+
+  pointer-events: none;
+}
+
+/* ПЛАНШЕТ - ПОДВАЛ */
+@media (min-width: @tablet_width) {
+  .page-footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page-footer__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 143px;
+  }
+
+  /* логотип подвала ПЛАНШЕТ*/
+  .page-footer__logo {
+    display: block;
+
+    &:hover {
+      fill: #46c1ae;
+    }
+
+    &:active {
+      fill: rgba(70, 193, 174, 0.3);
+    }
+  }
+
+  /* социальные иконки подвала ПЛАНШЕТ*/
+  .page-footer__socials-wrapper {
+    width: 144px;
+    padding: 0;
+    margin: 0;
+
+    position: relative;
+    left: 40px;
+  }
+
+  /* Разработчик подвала ПЛАНШЕТ*/
+  .page-footer__developer-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page-footer__developer {
+    padding-top: 14px;
+    padding-bottom: 10px;
+    margin: 0;
+  }
+
+  .page-footer__developer-text {
+    max-width: 220px;
+  }
+}

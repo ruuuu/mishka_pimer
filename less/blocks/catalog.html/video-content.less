@@ -1,0 +1,209 @@
+/* -- ВИДЕО БЛОК -- */
+.video-content__inner {
+  padding-top: 26px;
+  padding-bottom: 33px;
+  border: @header-border;
+}
+
+/* Заголовок видео блока */
+.video-content__title {
+  position: relative;
+
+  .general-font-family-bold();
+  font-size: 17px;
+  line-height: 1.41;
+  color: black;
+
+  min-height: 48px;
+  padding-left: 88px;
+  margin: 0;
+  margin-bottom: 25px;
+
+  &::before {
+    z-index: 1;
+    position: absolute;
+    top: 5px;
+    left: 34px;
+    content: "";
+
+    width: 32px;
+    height: 32px;
+
+    background-image: url("../img/icon-video.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+/* Картинка видео блока */
+.video-content__image-wrapper {
+  position: relative;
+
+  margin-bottom: 17px;
+}
+
+/* Кнопка воспроизведения видео блока */
+.video-content__play-button {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 101px;
+  height: 77px;
+
+  background-image: url("../img/icon-play.svg");
+  background-repeat: no-repeat;
+
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+    background-size: cover;
+  }
+
+  &:active {
+    transform: translate(-50%, -50%) scale(0.8);
+    background-size: cover;
+    opacity: 0.3;
+  }
+}
+
+/* Описание видео блока */
+.video-content__description {
+  .general-font-family();
+  font-size: 13px;
+  line-height: 1.85;
+  color: #444444;
+
+  margin: 0;
+  margin-bottom: 25px;
+  margin-left: 33px;
+  margin-right: 33px;
+}
+
+/* Кнопка заказа видео блока */
+.video-content__order-link {
+  display: block;
+
+  width: 192px;
+  margin: 0 auto;
+}
+
+/* ПЛАНШЕТ - ВИДЕО БЛОК */
+@media (min-width: @tablet_width) {
+  .video-content {
+    position: relative;
+    padding-top: 455px;
+    padding-bottom: 64px;
+  }
+
+  .video-content__inner {
+    width: 668px;
+    padding-top: 37px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 46px;
+  }
+
+  .video-content__sub-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Заголовок видео блока ПЛАНШЕТ*/
+  .video-content__title {
+    font-size: 20px;
+    line-height: 1.2;
+
+    padding-left: 105px;
+    margin-bottom: 7px;
+
+    &::before {
+      top: -6px;
+      left: 40px;
+    }
+  }
+
+  /* Картинка видео блока ПЛАНШЕТ */
+  .video-content__image-wrapper {
+    position: absolute;
+    z-index: 2;
+    left: calc((100% - @tablet_width) / 2 + @tablet_padding);
+    top: 0;
+  }
+
+  .video-content__image {
+    width: 668px;
+    height: 455px;
+  }
+
+  /* Описание видео блока ПЛАНШЕТ */
+  .video-content__description {
+    font-size: 15px;
+    line-height: 2;
+
+    margin-left: 38px;
+    margin-right: 38px;
+    margin-bottom: 35px;
+  }
+
+  /* Кнопка заказа видео блока ПЛАНШЕТ*/
+  .video-content__order-link {
+    width: 584px;
+  }
+}
+
+/* ДЕСКТОП - ВИДЕО БЛОК */
+@media (min-width: @desktop_width) {
+  .video-content {
+    padding-top: 0;
+    padding-bottom: 102px;
+  }
+
+  .video-content__inner {
+    position: relative;
+
+    width: 1050px;
+    min-height: 457px;
+    padding-left: 755px;
+    padding-right: 55px;
+    padding-top: 94px;
+    border: 1px solid #ececec;
+  }
+
+  /* Заголовок видео блока ДЕСКТОП*/
+  .video-content__title {
+    padding-left: 4px;
+    margin-bottom: 33px;
+
+    &::before {
+      top: -55px;
+      left: 6px;
+    }
+  }
+
+  /* Описание видео блока ДЕСКТОП */
+  .video-content__description {
+    margin: 0 0 45px;
+    padding-left: 3px;
+  }
+
+  /* Картинка видео блока ДЕСКТОП */
+  .video-content__image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 682px;
+    height: 455px;
+  }
+
+  .video-content__image {
+    width: 682px;
+    height: 455px;
+  }
+
+  /* Кнопка заказа видео блока ДЕСКТОП */
+  .video-content__order-link {
+    width: 230px;
+  }
+}

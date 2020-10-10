@@ -1,0 +1,80 @@
+/* -- ОБЩИЕ -- */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  .general-font();
+
+  min-width: @mobile_width;
+  margin: 0 auto;
+
+  background-color: white;
+}
+
+.container {
+  width: 260px;
+  margin: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+
+// ПЛАНШЕТ
+@media (min-width: @tablet_width) {
+  body {
+    width: auto;
+
+    background-color: white;
+  }
+
+  .container {
+    width: @tablet_width;
+    padding: 0 50px;
+    margin: auto;
+  }
+
+  .nowrap {
+    white-space: normal;
+  }
+}
+
+@media (min-width: @desktop_width) {
+  body {
+    width: auto;
+
+    background-color: white;
+  }
+
+  .container {
+    width: @desktop_width;
+    padding: 0 50px;
+    margin: auto;
+  }
+}
